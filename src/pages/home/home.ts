@@ -5,7 +5,7 @@ import { getRepository, Repository } from 'typeorm';
 import { Author } from '../../entities/author';
 import { Category } from '../../entities/category';
 import { Post } from '../../entities/post';
-
+import { AccountPage } from '../account/account';
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -50,6 +50,10 @@ export class HomePage {
 
     console.log("Post has been loaded: ", loadedPost);
     this.loadedPost = loadedPost;
+  }
+
+  goToAccount(){
+    this.navCtrl.push(AccountPage,{params:'asd'});
   }
 
   getCategories() {

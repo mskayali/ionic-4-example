@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+    </ion-buttons>
+    <ion-title>Account</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+    <form>
+      <ion-item>
+        <ion-label>name</ion-label>
+        <ion-input [ngModelOptions]="{standalone: true}" type="text" [(ngModel)]="user.userName"></ion-input>
+      </ion-item>      
+      <ion-item>
+        <ion-label>email</ion-label>
+        <ion-input [ngModelOptions]="{standalone: true}" type="text" [(ngModel)]="user.eMail"></ion-input>
+      </ion-item>      
+      <ion-item>
+        <ion-label>password</ion-label>
+        <ion-input [ngModelOptions]="{standalone: true}" type="password" [(ngModel)]="user.password"></ion-input>
+      </ion-item>      
+      <ion-item>
+        <ion-label>password</ion-label>
+        <ion-input [ngModelOptions]="{standalone: true}" type="date" [(ngModel)]="user.created_at"></ion-input>
+      </ion-item>
+    </form>
+    <button (click)="save()">save</button>
+
+{{users | json}}
+</ion-content>

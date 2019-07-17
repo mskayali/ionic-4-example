@@ -16,7 +16,7 @@
     <ion-item-divider color="primary">Loaded Post</ion-item-divider>
     <ion-item *ngIf="!loadedPost">Post not loaded</ion-item>
     <ion-item-group *ngIf="loadedPost">
-      <ion-item>ID: {{loadedPost?.id}}</ion-item>
+      <ion-item (click)="goToAccount()">ID: {{loadedPost?.id}}</ion-item>
       <ion-item>Title: {{loadedPost?.title}}</ion-item>
       <ion-item>Author: {{loadedPost?.author.name}}</ion-item>
       <ion-item>Categories: {{getCategories()}}</ion-item>

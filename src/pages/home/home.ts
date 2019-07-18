@@ -6,6 +6,7 @@ import { Author } from '../../entities/author';
 import { Category } from '../../entities/category';
 import { Post } from '../../entities/post';
 import { AccountPage } from '../account/account';
+import { BuyPage } from '../buy-page/buy';
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -54,6 +55,9 @@ export class HomePage {
 
   goToAccount(){
     this.navCtrl.push(AccountPage,{params:'asd'});
+  }  
+  goToBuy(){
+    this.navCtrl.push(BuyPage,{params:'asd'});
   }
 
   getCategories() {

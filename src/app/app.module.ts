@@ -9,12 +9,14 @@ import { IonicStorageModule } from '@ionic/storage';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { AccountPage } from '../pages/account/account';
+import { BuyPage } from '../pages/buy-page/buy';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    AccountPage
+    AccountPage,
+    BuyPage
   ],
   imports: [
     BrowserModule,
@@ -25,7 +27,8 @@ import { AccountPage } from '../pages/account/account';
   entryComponents: [
     MyApp,
     HomePage,
-    AccountPage
+    AccountPage,
+    BuyPage
   ],
   providers: [
     StatusBar,
